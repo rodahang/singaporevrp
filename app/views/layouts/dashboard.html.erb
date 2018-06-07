@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+		<% provide(:title, 'Singapore VRP') %>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<%= stylesheet_link_tag "bootstrap.min" %>
+		<%= stylesheet_link_tag "mdb.min" %>
+		<%= stylesheet_link_tag "dashboard_layout" %>
+
+	</head>
+
+	<body>
+		<header>
+			<!-- Navbar -->
+			<nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+				<div class="container">
+					<a class="navbar-brand" href="https://mdbootstrap.com/previews/docs/latest/html/intros/intro-register-classic-form.html#"> </a>
+
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					
+					<div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+						<ul class="navbar-nav mr-auto">
+							<li class="nav-item <%= 'active' if current_page?(root_path) %>">
+								<%= link_to root_path, class: "nav-link waves-effect waves-light" do %>
+									Main<span class="sr-only">(current)</span>
+								<% end %>
+							</li>
+							
+							<li class="nav-item <%= 'active' if current_page?(research_path) %>">
+								<%= link_to "Our Research",   research_path, :class=> "nav-link waves-effect waves-light" %>
+							</li>
+							
+							<li class="nav-item <%= 'active' if current_page?(about_path) %>">
+								<%= link_to "Our Team",   about_path, :class=> "nav-link waves-effect waves-light" %>
+							</li>
+						</ul>
+						<form class="form-inline">
+							<div class="md-form mt-0" style="margin-right: auto; margin-bottom: auto;">
+								<div class="waves-input-wrapper waves-effect waves-light"><input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"></div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</nav>
+			<!-- Navbar -->
+
+
+			<!-- Full Page Intro -->
+    		<div class="view" style="background-image:  url(<%= image_path 'singapore.jpg' %>); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+
+    			<%= yield %>
+    		
+    		</div>
+    		<!-- Full Page Intro -->
+
+		</header>
+
+	 	<%= javascript_include_tag 'jquery-3.2.1.min'%>
+		<%= javascript_include_tag 'popper.min'%>
+		<%= javascript_include_tag 'bootstrap.min'%>
+		<%= javascript_include_tag 'mdb.min'%>
+
+
+	</body>
+</html>
+
+

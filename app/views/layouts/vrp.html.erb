@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="js">
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	    <% provide(:title, 'NUS Vehicle Routing Optimizer') %>
+
+	    <%= stylesheet_link_tag "jquery-ui.min" %>
+	    <!-- Font Awesome -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	    <!-- Bootstrap core CSS -->
+	    <%= stylesheet_link_tag "bootstrap.min" %>
+	    <!-- Material Design Bootstrap -->
+	    <%= stylesheet_link_tag "mdb.min" %>
+
+	    <!-- CUSTOM CSS -->
+		<%= stylesheet_link_tag "vrpsg" %>
+		<%= stylesheet_link_tag "gradient" %>
+	</head>
+
+	<body>
+		<!-- MD BOOTSTRAP -->
+		<!-- SCRIPTS -->
+		<!-- JQuery -->
+		<%= javascript_include_tag 'jquery-3.2.1.min'%>
+		<%= javascript_include_tag 'jquery-ui.min'%>
+		<!-- Bootstrap tooltips -->
+		<%= javascript_include_tag 'popper.min'%>
+		<!-- Bootstrap core JavaScript -->
+		<%= javascript_include_tag 'bootstrap.min'%>
+		<!-- MDB core JavaScript -->
+		<%= javascript_include_tag 'mdb.min'%>
+
+		<!-- ARCGIS -->
+		<link rel="stylesheet" href="https://js.arcgis.com/4.7/esri/css/main.css">
+		<script src="https://js.arcgis.com/4.7/"></script>
+
+		<!-- CUSTOM JS -->
+	    <%= javascript_include_tag 'config'%>
+		<%= javascript_include_tag 'paramConfig'%>
+		<%= javascript_include_tag 'storageHelper'%>
+		<%= javascript_include_tag 'VRPHelper'%>
+
+		<!-- <nav class="navbar navbar-dark nav-palette-dark fixed-top"> -->
+		<nav class="navbar navbar-dark blue-purple-gradient fixed-top">
+			<span class="navbar-brand">NUS Vehicle Routing Optimizer v1.0</span>
+		</nav>
+
+		<%= yield %>
+
+		<nav class="navbar fixed-bottom navbar-dark blue-purple-gradient">
+        	<div class="vrp-center c-lightgray">© 2018 Copyright: Department of ISEM, NUS</div>
+		</nav>
+
+	</body>
+</html>

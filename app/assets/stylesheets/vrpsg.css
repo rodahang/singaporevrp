@@ -1,0 +1,48 @@
+html,body {
+	height: 100%;
+	font-family: Lato,Helvetica,Arial,sans-serif;
+	font-size: .875em;
+}
+
+.navbar-up {
+	height: 50px;
+}
+
+.navbar-down {
+	height: 32px;
+}
+
+.vrp-red {
+	background-color: red;
+}
+
+.vrp-yello  {
+	background-color: yellow;
+}
+
+.vrp-green {
+	background-color: green;
+}
+.vrp-center {
+	margin: auto;
+}
+
+.nus-orange {
+	color: #EF7C00;
+}
+
+.c-lightgray {
+	color: lightgray;
+}
+
+.nav-palette-dark {
+	background-color: #413E4A;
+}
+
+.esri-ui-manual-container>.esri-component {
+	display: none;
+}
+
+
+
+

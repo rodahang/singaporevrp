@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  	root 'dashboard#home'
+  	
+  	get 'research', 	to: 'dashboard#research'
+	get 'about', 	to: 'dashboard#about'
 
-  root 'application#roseele'
+	get 'input', 	to: 'vrp#input'
+  	get 'solve', 	to: 'vrp#solve'
 end
